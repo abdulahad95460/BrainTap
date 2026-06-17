@@ -1,9 +1,22 @@
 import React, { useEffect, useState } from "react";
 const QuizData = [
-  { question: "what is javscript ? " },
-  { question: "what is the capital of india" },
-  { question: "who build microsoft" },
-  { question: "who is mahatma gandhi " },
+  { question: "what is javscript ? " ,
+    option : ["programming language" , "company name" , "product" , "none of the above"]
+  },
+
+  { question: "what is the capital of india" ,
+    option : ["New Delhi" , "USA" , "Jharkhand" , "Italy"]
+  },
+
+
+  { question: "who build microsoft" ,  
+    option : ["Bill Gates" , "Narendra Modi" , "Mark Zuckerberg" , "Elon Musk"]
+
+  },
+  { question: "who is mahatma gandhi " ,
+    option : ["Famous Scientist" , "A hollywood Actor" , "Musician" , "Father of Nation"]
+
+   },
 ];
 const Questions = () => {
   const [Count, setCount] = useState(15);
@@ -50,6 +63,11 @@ const Questions = () => {
         <div id="tan">question no ~ {QuestionNo}</div>{" "}
         {QuizData[CurrentIndex].question} <span> {Count}</span>
       </h2>
+   
+        <h3><button>{QuizData[CurrentIndex].option}</button></h3>
+        <h3><button></button></h3>
+        <h3><button></button></h3>
+        <h3><button></button></h3>
 
       <button onClick={pause}> pause </button>
       <button onClick={resume}> resume </button>
