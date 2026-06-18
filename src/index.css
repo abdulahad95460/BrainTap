@@ -1,31 +1,63 @@
-h2{
-  display: flex;
-font-family: Arial, sans-serif;
-color: darkgreen;
-}
-
-span{
-background-color: rgb(173, 173, 81);
-margin-left: 20px;
-color: white;
-font-size: 1.5rem;
-
-}
-#tan{
-font-size: 24px;
-font-weight: bold;
-color: blue;
-margin-right: 10px;
+h2 {
   
+  font-family: Arial, sans-serif;
+  color: darkgreen;
+  margin-bottom: 20px;
+}
+
+span {
+  background-color: rgb(173, 173, 81);
+  margin-left: 20px;
+  color: white;
+  font-size: 1.5rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+#tan {
+  font-size: 24px;
+  font-weight: bold;
+  color: blue;
+  margin-right: 10px;
+  display: inline-block; 
+}
+.q-option {
+  display: inline-block;
+  margin: 8px;
+  width: calc(50% - 16px); 
+}
+
+
+.optbutton {
+  width: 100%; 
+  padding: 12px 16px;   
+  font-size: 16px;     
+  background-color: #f9f9f9;
+  border: 2px solid #0077cc;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.optbutton:hover {
+  background-color: #0077cc;
+  color: white;
+}
+
+.lowerbuttons{
   
+   width: 100%; 
+  margin-top: 18px;   
+  font-size: 16px;     
+  background-color: #f9f9f9;
+  border: 1px solid #0077cc;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
 }
+.lowerbuttons:hover{
+  color: white;
+  background-color: #389b3e;
 
-button{
- 
-margin-left: 100px;
-font-size: 1rem;
-border-radius: 10%;
-border: 1px solid tomato;
 
 }
-

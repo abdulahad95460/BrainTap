@@ -64,14 +64,16 @@ const Questions = () => {
         {QuizData[CurrentIndex].question} <span> {Count}</span>
       </h2>
    
-        <h3><button>{QuizData[CurrentIndex].option}</button></h3>
-        <h3><button></button></h3>
-        <h3><button></button></h3>
-        <h3><button></button></h3>
+       {QuizData[CurrentIndex].option.map((opt, id) => (
+  <h3 className="q-option" key={id}>
+    <button className="optbutton">{opt}</button>
+  </h3>
+))}
+       
 
-      <button onClick={pause}> pause </button>
-      <button onClick={resume}> resume </button>
-      <button onClick={next}> next</button>
+      <button className="lowerbuttons" onClick={pause}> pause </button>
+      <button className="lowerbuttons" onClick={resume}> resume </button>
+      <button className="lowerbuttons" onClick={next}> next</button>
     </div>
   );
 };
