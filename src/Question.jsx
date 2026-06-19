@@ -1,20 +1,24 @@
 import React, { useEffect, useState } from "react";
 const QuizData = [
   { question: "what is javscript ? " ,
-    option : ["programming language" , "company name" , "product" , "none of the above"]
+    option : ["programming language" , "company name" , "product" , "none of the above"],
+    answer : "programming language"
   },
 
   { question: "what is the capital of india" ,
-    option : ["New Delhi" , "USA" , "Jharkhand" , "Italy"]
+    option : ["New Delhi" , "USA" , "Jharkhand" , "Italy"],
+    answer : "New Delhi"
   },
 
 
   { question: "who build microsoft" ,  
-    option : ["Bill Gates" , "Narendra Modi" , "Mark Zuckerberg" , "Elon Musk"]
+    option : ["Bill Gates" , "Narendra Modi" , "Mark Zuckerberg" , "Elon Musk"],
+    answer : "Bill Gates"
 
   },
   { question: "who is mahatma gandhi " ,
-    option : ["Famous Scientist" , "A hollywood Actor" , "Musician" , "Father of Nation"]
+    option : ["Famous Scientist" , "A hollywood Actor" , "Musician" , "Father of Nation"],
+    answer : "Father of Nation"
 
    },
 ];
@@ -56,6 +60,16 @@ const Questions = () => {
     }
   };
 
+    const checkAnswer = (SelectedOption) =>{
+      if(SelectedOption === QuizData[CurrentIndex].answer){
+        alert("you guess the right answer , User")
+      }
+      else{
+        alert("hehe , better luck next time")
+      }
+    }
+  
+
   return (
     <div>
       <h2>
@@ -64,11 +78,15 @@ const Questions = () => {
         {QuizData[CurrentIndex].question} <span> {Count}</span>
       </h2>
    
+
+ {/* Options area  */}
+
        {QuizData[CurrentIndex].option.map((opt, id) => (
   <h3 className="q-option" key={id}>
-    <button className="optbutton">{opt}</button>
+    <button onClick={()=>checkAnswer(opt)} className="optbutton">{opt}</button>
   </h3>
 ))}
+ {/* Options area  */}
        
 
       <button className="lowerbuttons" onClick={pause}> pause </button>
