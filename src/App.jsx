@@ -1,11 +1,12 @@
 import React from 'react'
-import Questions from './Question'
+import HomePage from './mainPage/HomePage'
 
 const App = () => {
   return (
     <>
     
-    <Questions />
+    <HomePage />
+    
     </>
   )
 }

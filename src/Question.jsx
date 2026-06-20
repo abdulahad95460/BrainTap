@@ -62,10 +62,11 @@ const Questions = () => {
 
     const checkAnswer = (SelectedOption) =>{
       if(SelectedOption === QuizData[CurrentIndex].answer){
-        alert("you guess the right answer , User")
+        alert("you guess the right answer , User 😒")
+       
       }
       else{
-        alert("hehe , better luck next time")
+        alert("hehe , better luck next time 🤣")
       }
     }
   
