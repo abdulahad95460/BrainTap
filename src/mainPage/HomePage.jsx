@@ -10,7 +10,7 @@ const HomePage = () => {
         return <Questions />
     }
   return (
-    <div>
+    <div className='homePageDiv'>
         <h1 className='homePageHeader'>Let's Start</h1>
         <button className='homePageButton' onClick={()=> sethomeDisplay(true)}>Click To Play</button>
     </div>
