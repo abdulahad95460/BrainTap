@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Stopwatch from "./Stopwatch";
 const QuizData = [
   { question: "what is javscript ? " ,
     option : ["programming language" , "company name" , "product" , "none of the above"],
@@ -93,6 +94,7 @@ const Questions = () => {
       <button className="lowerbuttons" onClick={pause}> pause </button>
       <button className="lowerbuttons" onClick={resume}> resume </button>
       <button className="lowerbuttons" onClick={next}> next</button>
+      <Stopwatch />
     </div>
   );
 };
