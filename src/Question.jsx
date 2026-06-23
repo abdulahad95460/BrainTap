@@ -27,8 +27,8 @@ const Questions = () => {
   const [Count, setCount] = useState(15);
   const [CurrentIndex, setCurrentIndex] = useState(0);
   const [QuestionNo, setQuestionNo] = useState(1);
-  const [running, setRunning] = useState(true); // ✅ new state
-
+  const [running, setRunning] = useState(true); 
+  const [StopwatchRunning, setStopwatchRunning] = useState(true)
   useEffect(() => {
     if (!running) {
       return;
@@ -59,11 +59,15 @@ const Questions = () => {
       setQuestionNo((prev) => prev + 1);
       setCount(15);
     }
+    else{
+      StopwatchRunning()
+    }
   };
 
     const checkAnswer = (SelectedOption) =>{
       if(SelectedOption === QuizData[CurrentIndex].answer){
-        alert("you guess the right answer , User 😒")
+        setCount(0);
+
        
       }
       else{
