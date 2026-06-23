@@ -7,7 +7,7 @@ const HomePage = () => {
     const [homeDisplay, sethomeDisplay] = useState(false)
     useEffect(() => {
   if (homeDisplay) {
-    alert("Hey User, as you tapped the play button , remem ber there's a stopwatch to track how much time will it take you to complete that game ");
+    alert("Hey User, as you tapped the play button , remember there's a stopwatch to track how much time will it take you to complete that game ");
   }
 }, [homeDisplay]);
 
